@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FQA Questions</title>
+    
+<link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body>
+    <header class="h-24 w-full  bg-[#F9F7F3]  ">
+        <div class="flex justify-around ">
+            <button class="bg-[#B4F461] text-[#111111]  h-12 w-28 font-semibold rounded-lg mt-6"><a href="index.html">Home</a></button>
+            <div class=" mt-5 hidden lg:flex">
+                <img src="assets/logo.png" alt="">
+                <h1 class="font-semibold mt-5 text-xl text-black ml-2 w-56">Donate Bangladesh</h1>
+            </div>
+            <div class="flex mt-5">
+                <img class="w-7 h-7 mt-3" src="assets/coin.png" alt="">
+                <h1  class="mt-3 font-semibold text-lg text-[#111111] opacity-70 ml-2 w-40"><span id="account-balance">50000</span> BDT</h1>
+            </div>
+        </div>
+    </header>
+
+    <section>
+        <div>
+            <h1 class="text-5xl text-black font-bold mt-5 ml-8 ">Important FQA</h1>
+        </div>
+        <div>
+            <div class="collapse collapse-arrow bg-base-200 border lg:w-[1300px] w-[450px] ml-4 lg:ml-8 mt-8">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the document object model (DOM)?</div>
+                <div class="collapse-content">
+                  <p>The Document Object Model (DOM) is a programming interface for web documents.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200 lg:w-[1300px] w-[450px] ml-4 lg:ml-8  ">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM ?</div>
+                <div class="collapse-content">
+                  <p>id,class , tag name, quarrySelector,quarrySelectorAll,textContent,HTML Content etc... </p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200 lg:w-[1300px] w-[450px] ml-4 lg:ml-8  ">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the content of the DOM and why is it useful ?</div>
+                <div class="collapse-content">
+                  <p>Event delegation is a design pattern in JavaScript used to efficiently manage and handle events on multiple child elements by attaching a single event listener to a common ancestor element.</p>
+                </div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-200 lg:w-[1300px] w-[450px] ml-4 lg:ml-8 ">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulates an element attribute and styling using the DOM ?</div>
+                <div class="collapse-content">
+                  <p>Teh classList object only provide methods to change teh class of an element. If you want to change other attributes like id , href , or src , you can use teh setAttribute() method. Teh setAttribute() method accepts two arguments: Teh name of teh attribute to set.</p>
+                </div>
+              </div>
+        </div>
+    </section>
+</body>
+</html>
