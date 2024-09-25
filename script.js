@@ -53,143 +53,109 @@
 
                        //  first section dom 
 
-   document.getElementById('donate-button').addEventListener("click",function(){
-    
-    const inputValue = parseFloat( document.getElementById('input-value').value)
-
+    document.getElementById('donate-button').addEventListener("click", function () {
+    const inputValue = parseFloat(document.getElementById('input-value').value);
     const mainBalance = parseFloat(document.getElementById('main-balance').innerText);
-    document.getElementById('main-balance').innerText = inputValue + mainBalance;
-
-
-
     const balance = parseFloat(document.getElementById('account-balance').innerText);
-    document.getElementById('account-balance').innerText = balance - inputValue;
 
-
-    function historyOfTheYear(){
-        const historyItem = document.createElement('div')
-    historyItem.className = 
-    'lg:w-[1200px] h-32 border border-gray-300 p-10 m-auto rounded-xl mb-4 '
-
-    historyItem.innerHTML = `
-    <h1>${inputValue.toFixed(2)}   taka donated for Flood at Noakhali, Bangladesh</h1>
-
-    <p>Date : ${new Date().toLocaleDateString()}</p>
-    `
-
-     
-     const historyContainer = document.getElementById('history-list')
-    historyContainer.insertBefore(historyItem , historyContainer.firstChild)
-
-    }
-
-    if(isNaN(inputValue) || inputValue <= 0){
-        alert('Invalid Amount💸💵 try again❌👎⚠️ ')
+    if (isNaN(inputValue) || inputValue <= 0) {
+        alert('Invalid Amount💸💵 try again❌👎⚠️');
         return;
     }
-   if(inputValue > balance){
-    alert('Insufficient balance ❌👎⚠️')
-    return
-   }
-    
 
-return historyOfTheYear();
+    if (inputValue > balance) {
+        alert('Insufficient balance ❌👎⚠️');
+        return;
+    }
 
+    document.getElementById('main-balance').innerText = (inputValue + mainBalance).toFixed(2);
+    document.getElementById('account-balance').innerText = (balance - inputValue).toFixed(2);
 
+    function historyOfTheYear() {
+        const historyItem = document.createElement('div');
+        historyItem.className = 'lg:w-[1200px] h-32 border border-gray-300 p-10 m-auto rounded-xl mb-4';
 
+        historyItem.innerHTML = `
+            <h1>${inputValue.toFixed(2)} taka donated for Flood at Noakhali, Bangladesh</h1>
+            <p>Date: ${new Date().toLocaleDateString()}</p>
+        `;
 
+        const historyContainer = document.getElementById('history-list');
+        historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+    }
 
-    
-    })
+    return historyOfTheYear();
+});
+
 
                         // second section dom 
 
-    document.getElementById('donate-button-2').addEventListener('click',function(){
-       const inputValueTow = parseFloat(document.getElementById('input-value-2').value);
-       
-       const mainBalanceTow = parseFloat(document.getElementById('main-balance-2').innerText);
-       document.getElementById('main-balance-2').innerText = inputValueTow + mainBalanceTow;
-       
-       const Balance = parseFloat(document.getElementById("account-balance").innerText);
-       document.getElementById('account-balance').innerText = Balance - inputValueTow;
+  document.getElementById('donate-button-2').addEventListener('click', function () {
+    const inputValueTow = parseFloat(document.getElementById('input-value-2').value);
+    const mainBalanceTow = parseFloat(document.getElementById('main-balance-2').innerText);
+    const Balance = parseFloat(document.getElementById("account-balance").innerText);
 
-
-       const historyItem = document.createElement('div')
-    historyItem.className = 
-    'lg:w-[1200px] h-32 border border-gray-300 p-10 m-auto rounded-xl mb-4'
-
-    historyItem.innerHTML = `
-    <h1>${inputValueTow.toFixed(2)}   taka Donated for Flood Relief in Feni,Bangladesh</h1>
-
-    <p>Date : ${new Date().toLocaleDateString()}</p>
-    `
-    if(isNaN(inputValueTow) || inputValueTow <= 0){
-        alert('Invalid Amount💸💵 try again❌👎⚠️ ')
+    if (isNaN(inputValueTow) || inputValueTow <= 0) {
+        alert('Invalid Amount💸💵 try again❌👎⚠️');
         return;
     }
-    if(inputValueTow > Balance){
-        alert('Insufficient balance ❌👎⚠️')
-        return
-       }
-   
-     
-     const historyContainer = document.getElementById('history-list')
-    historyContainer.insertBefore(historyItem , historyContainer.firstChild)
 
-    document.getElementById('donate-button-2').addEventListener('click',function(){
-        alert('Congratulation . Donate for Flood Relief in Feni,Bangladesh')
-    })
-    })
+    if (inputValueTow > Balance) {
+        alert('Insufficient balance ❌👎⚠️');
+        return;
+    }
 
+    document.getElementById('main-balance-2').innerText = (inputValueTow + mainBalanceTow).toFixed(2);
+    document.getElementById('account-balance').innerText = (Balance - inputValueTow).toFixed(2);
+
+    const historyItem = document.createElement('div');
+    historyItem.className = 'lg:w-[1200px] h-32 border border-gray-300 p-10 m-auto rounded-xl mb-4';
+
+    historyItem.innerHTML = `
+        <h1>${inputValueTow.toFixed(2)} taka Donated for Flood Relief in Feni, Bangladesh</h1>
+        <p>Date: ${new Date().toLocaleDateString()}</p>
+    `;
+
+    const historyContainer = document.getElementById('history-list');
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+
+    alert('Congratulations! You have successfully donated for Flood Relief in Feni, Bangladesh.');
+});
 
 
                     //  third section dom using function
 
-    function donateMoney(){
-        document.getElementById('donate-button-3')
-        
-        const inputValueThree = parseFloat(document.getElementById('input-value-3').value)
-        
-        const mainBalanceThree = parseFloat(document.getElementById('main-balance-3').innerText);
-        document.getElementById('main-balance-3').innerText = inputValueThree + mainBalanceThree;
+   function donateMoney() {
+    const inputValueThree = parseFloat(document.getElementById('input-value-3').value);
+    const mainBalanceThree = parseFloat(document.getElementById('main-balance-3').innerText);
+    const balance = parseFloat(document.getElementById('account-balance').innerText);
 
-        const balance = parseFloat(document.getElementById('account-balance').innerText);
-        document.getElementById('account-balance').innerText = balance - inputValueThree;
-
-
-
-
-        const historyItem = document.createElement('div')
-    historyItem.className = 
-    'lg:w-[1200px] h-32 border border-gray-300 p-10 m-auto rounded-xl mb-4'
-
-    historyItem.innerHTML = `
-    <h1>${inputValueThree.toFixed(2)}   taka donated Aid for Injured in the Quota Movement</h1>
-
-    <p>Date : ${new Date().toLocaleDateString()}</p>
-    `
-
-    if(isNaN(inputValueThree) || inputValueThree <= 0){
-        alert('Invalid Amount💸💵 try again❌👎⚠️ ')
+    if (isNaN(inputValueThree) || inputValueThree <= 0) {
+        alert('Invalid Amount💸💵 try again❌👎⚠️');
         return;
     }
 
-    if(inputValueThree > balance){
-        alert('Insufficient balance ❌👎⚠️')
-        return
-       }
-
-    document.getElementById('donate-button-3').addEventListener('click',function(){
-        alert('Congratulation . Aid for Injured in the Quota Movement')
-    })
-     
-     const historyContainer = document.getElementById('history-list')
-    historyContainer.insertBefore(historyItem , historyContainer.firstChild)
-
-    
-
+    if (inputValueThree > balance) {
+        alert('Insufficient balance ❌👎⚠️');
+        return;
     }
 
+    document.getElementById('main-balance-3').innerText = (inputValueThree + mainBalanceThree).toFixed(2);
+    document.getElementById('account-balance').innerText = (balance - inputValueThree).toFixed(2);
+
+    const historyItem = document.createElement('div');
+    historyItem.className = 'lg:w-[1200px] h-32 border border-gray-300 p-10 m-auto rounded-xl mb-4';
+
+    historyItem.innerHTML = `
+        <h1>${inputValueThree.toFixed(2)} taka donated Aid for Injured in the Quota Movement</h1>
+        <p>Date: ${new Date().toLocaleDateString()}</p>
+    `;
+
+    const historyContainer = document.getElementById('history-list');
+    historyContainer.insertBefore(historyItem, historyContainer.firstChild);
+
+    alert('Congratulations! Aid for Injured in the Quota Movement has been successfully donated.');
+}
 
 
 
